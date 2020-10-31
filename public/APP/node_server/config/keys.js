@@ -25,7 +25,7 @@ module.exports = {
         _pass: ""
     },
     ANTMEDIA : {
-        base_url: "",
+        base_url: "https://media.yora.gg:5443/",
         api_url: "",
         vod_url: "",
     }
