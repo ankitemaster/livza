@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+
+/** Module dependencies. */
+const app = require("../randou");
+const http = require("http");
+const https = require("https");
+const fs = require("fs");
+const config = require("../node_server/config/keys");
+let secure = config.HTTPS;
+
+/** Get port from environment and store in Express. */
+let port = normalizePort(process.env.PORT || config.PORT);
+app.set("port", port);
+
+/* Create HTTP server. */
+if (secure === "off") {
+    nodeServer = http.createServer(app);
+} else {
+    /* ssl certificates */
+    let privateKey = fs.readFileSync("");
+    let certificate = fs.readFileSync("");
+    let ca = fs.readFileSync("");
+    let sslOptions = {
+        key: privateKey,
+        cert: certificate,
+        ca: ca
+    };
+    nodeServer = https.createServer(sslOptions, app);
+}
+
+/** Listen on provided port, on all network interfaces. */
+nodeServer.listen(port, () => console.log(`API is running on:${port}`));
+nodeServer.on("error", onError);
+
+/** Normalize a port into a number, string, or false. */
+function normalizePort(val) {
+    let port = parseInt(val, 10);
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+    return false;
+}
+
+/** Event listener for HTTP server "error" event. */
+function onError(error) {
+    if (error.syscall !== "listen") {
+        throw error;
+    }
+    let bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+    // handle specific listen errors with friendly messages
+    switch (error.code) {
+        case "EACCES":
+            console.error(bind + " requires elevated privileges");
+            process.exit(1);
+            break;
+        case "EADDRINUSE":
+            console.error(bind + " is already in use");
+            process.exit(1);
+            break;
+        default:
+            throw error;
+    }
+}

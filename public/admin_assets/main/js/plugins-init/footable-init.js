@@ -1,0 +1,1 @@
+(function(_0x29ef2b){'use strict';_0x29ef2b('#footable')['footable']();}(jQuery));

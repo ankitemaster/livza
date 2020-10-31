@@ -1,0 +1,12 @@
+db.accounts.remove({});
+db.adminchats.remove({});
+db.blocks.remove({});
+db.devices.remove({});
+db.followings.remove({});
+db.payments.remove({});
+db.streamreports.remove({});
+db.streams.remove({});
+db.subscriptions.remove({});
+db.videochats.remove({});
+db.gems.remove({});
+db.gifts.remove({});

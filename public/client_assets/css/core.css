@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------
+Project:        LIVZA
+Author:         HITASOFT UI TEAM
+Created:        01/02/2018 
+-------------------------------------------------------------------*/
+
+
+.bg_cover{
+	background: linear-gradient(120deg, #569086, #05ac90, #38516e, #ff2d60, #ff9132);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	padding-bottom: 90px;
+	height: auto;
+}
+  @-webkit-keyframes Gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+@-moz-keyframes Gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+@keyframes Gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+.phone
+{
+	background: url('../images/phone_new.png') no-repeat 50%;
+    background-size: auto auto;
+	background-size: contain;
+	padding: 57px 25px 0 23px;
+	width: 270px;
+	height: 500px;
+	display: inline-block;
+}
+.phone video{width: 100%; border-radius: 5px;}
+.livza_logo
+{
+	height: auto;
+	width: 150px;
+}
+.phone{margin-right: 40px;}
+.app_details{padding-top: 85px;}
+.desc
+{
+	color: #ffffff;
+	font-size: 18px;
+	width: 80%;
+	line-height: 30px;
+}
+.bg_cover.help_cover{padding-top: 120px; padding-bottom: 65px;}
+.footer_section{
+	background-color: #ffffff;
+	font-size: 14px;
+	font-family: Regular;
+	padding: 60px 0px;
+}
+.help_details ul li a, .social_media ul li a{color: #3a3a3a;}
+.help_details ul li{margin-top: 15px;}
+.social_media ul li{margin-top: 20px;}
+
+.help_details > h2, .social_media > h1{font-size: 18px;}
+.social_icon img{
+	width: 35px;
+	height: 35px;
+}
+/**************************contactus**************************/
+.header_bg{background-color: #ffffff; border-bottom: 1px solid #dee0df;}
+.home
+{
+	/*background-image: url('../images/icons/home.svg');*/
+	width: 15px;
+	height: 15px;
+	background-size: cover;
+	display: inline-block;
+}
+.home .svg{fill: #3a3a3a;}
+.back_home{color: #3a3a3a; font-size: 14px; vertical-align: middle;}
+.header_logo{width: 85px; height: auto;}
+.help_headings, .help_desc
+{
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 20px;
+}
+.help_desc{padding: 30px;}
+.help_headings h2 a{color: #3a3a3a; font-size: 15px; vertical-align: middle; word-break: break-all;}
+.help_title{font-size: 25px; word-break: break-all;}
+.help_subtitle{font-size: 18px;}
+.help_input{height: 50px; border-color: #dee0df; border-bottom: 5px solid #dee0df; color: #3a3a3a;}
+.help_input::placeholder{color: #9f9f9f;}
+.help_desc textarea::placeholder{color: #9f9f9f;}
+.help_desc textarea{border-color: #dee0df; border-bottom: 5px solid #dee0df; color: #3a3a3a;}
+.privacy_desc{font-size: 14px; word-break: break-all;}
+.mail_img{
+	/*background-image: url('../images/icons/mail.png');*/
+	width: 26px;
+	height: 20px;
+	background-size: cover;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.mail_img .svg svg{fill: #3a3a3a;}
+.help_headings .active{color: #05ac90; font-family: Bold;}
+
+.help_nav{cursor: pointer; display: none;}
+.copyrights p, .help_details ul li a{word-break: break-all;}
+/*Responsive Codes*/
+@media (min-width: 768px)
+{
+	.help_headings.collapse{display: block;}
+}
+@media (max-width: 767px)
+{
+	.phone_video, .help_headings, .back_home{display: none;}
+	.help_nav{display: block;}
+	.help_headings, .help_nav{margin-bottom: 20px;}
+	.app_desc.margin_top50{margin-top: 20px; text-align: center;}
+	.app_details{padding-top: 40px;}
+	.margin_top20_mobile{margin-top: 20px;}
+	.footer_section_mble{background-color: #ffffff;
+    font-size: 14px;
+    font-family: Regular;
+    padding: 40px 0 100px 0px;
+    position: relative;	}
+    .mobile_copy{
+    	position: absolute;
+    	bottom: 0;
+    	padding: 0 20px;
+    }
+    .help_details{margin-bottom: 25px;}
+    .social_media{margin-bottom: 50px;}
+}
+@media (max-width: 991px)
+{
+	.desc{width: 100%}	
+}
+.btn_download{min-width: 192px;}
+.svg.fb, .svg.twitter, .svg.gplus{width: 35px; height: 35px; vertical-align: middle;}
+/*.svg.fb g path:first-child{fill: red !important;}
+.svg.twitter g circle{fill: gray !important;}
+.svg.gplus g circle{fill: black !important;}*/
